@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Funciona la Espiritualidad: Tu Guía para la Transformación Personal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F6F52',
+                        secondary: '#739072',
+                        accent: '#ECE3CE',
+                        light: '#D2E3C8',
+                        dark: '#3A4D39'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .process-step {
+            position: relative;
+        }
+        
+        .process-step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 40px;
+            background-color: #4F6F52;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1234567890" class="floating-whatsapp bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg hover:bg-green-600 transition-all">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-serif font-bold text-primary">Espiritualidad<span class="text-secondary">Transforma</span></a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-800 hover:text-primary transition">Inicio</a>
+                    <a href="#sobre-nosotros" class="text-gray-800 hover:text-primary transition">Sobre Nosotros</a>
+                    <a href="#pilares" class="text-gray-800 hover:text-primary transition">Pilares</a>
+                    <a href="#metodologia" class="text-gray-800 hover:text-primary transition">Metodología</a>
+                    <a href="#servicios" class="text-gray-800 hover:text-primary transition">Servicios</a>
+                    <a href="#testimonios" class="text-gray-800 hover:text-primary transition">Testimonios</a>
+                    <a href="#contacto" class="px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">Contacto</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden py-4">
+                <a href="#inicio" class="block py-2 text-gray-800 hover:text-primary transition">Inicio</a>
+                <a href="#sobre-nosotros" class="block py-2 text-gray-800 hover:text-primary transition">Sobre Nosotros</a>
+                <a href="#pilares" class="block py-2 text-gray-800 hover:text-primary transition">Pilares</a>
+                <a href="#metodologia" class="block py-2 text-gray-800 hover:text-primary transition">Metodología</a>
+                <a href="#servicios" class="block py-2 text-gray-800 hover:text-primary transition">Servicios</a>
+                <a href="#testimonios" class="block py-2 text-gray-800 hover:text-primary transition">Testimonios</a>
+                <a href="#contacto" class="block mt-2 px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary transition text-center">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">Desbloquea tu Potencial</h1>
+            <h2 class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Comprende y Transforma tu Espiritualidad para una Vida Plena</h2>
+            <p class="text-lg mb-10 max-w-2xl mx-auto">Encuentra claridad, supera limitaciones y evoluciona en tus relaciones, finanzas y salud con la sabiduría de 'Cómo Funciona la Espiritualidad'.</p>
+            <a href="#servicios" class="inline-block px-8 py-3 bg-primary text-white rounded-md text-lg font-medium hover:bg-secondary transition transform hover:scale-105">Empieza tu Transformación Hoy</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-nosotros" class="py-20 bg-accent">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1544376798-89aa2b670613?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Meditación" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-serif font-bold text-primary mb-6">Tu Asistente para el Desarrollo Personal y Espiritual</h2>
+                    <p class="text-gray-700 mb-6">En 'Cómo Funciona la Espiritualidad', te ayudamos a identificar y comprender los bloqueos que te impiden evolucionar en áreas fundamentales de tu vida.</p>
+                    <p class="text-gray-700 mb-8">Nuestro canal se dedica a proporcionarte información, estrategias y perspectivas basadas en el comportamiento y pensamiento humano eficiente, facilitando una evolución clara y consistente en tu crecimiento personal.</p>
+                    <a href="https://youtube.com" target="_blank" class="inline-flex items-center px-6 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition">
+                        <i class="fab fa-youtube mr-2"></i> Visita Nuestro Canal de YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars Section -->
+    <section id="pilares" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-center text-primary mb-16">Transformación en Áreas Clave de tu Vida</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Relationship Pillar -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md text-center transition duration-300">
+                    <div class="w-20 h-20 bg-light text-primary rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-secondary">Relaciones</h3>
+                    <p class="text-gray-600">Mejora tus conexiones interpersonales y cultiva el amor propio para relaciones más sanas y significativas.</p>
+                </div>
+                
+                <!-- Finance Pillar -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md text-center transition duration-300">
+                    <div class="w-20 h-20 bg-light text-primary rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-secondary">Finanzas</h3>
+                    <p class="text-gray-600">Desbloquea la abundancia y transforma tu mentalidad sobre la prosperidad para crear libertad financiera.</p>
+                </div>
+                
+                <!-- Health Pillar -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md text-center transition duration-300">
+                    <div class="w-20 h-20 bg-light text-primary rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-secondary">Salud y Bienestar</h3>
+                    <p class="text-gray-600">Encuentra equilibrio y vitalidad a través de prácticas conscientes que nutren cuerpo, mente y espíritu.</p>
+                </div>
+                
+                <!-- Growth Pillar -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md text-center transition duration-300">
+                    <div class="w-20 h-20 bg-light text-primary rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-secondary">Crecimiento Personal</h3>
+                    <p class="text-gray-600">Identifica patrones, explora nuevas creencias y redefine tu camino hacia tu mejor versión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="metodologia" class="py-20 bg-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-center text-primary mb-16">Un Enfoque Claro y Constructivo</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <p class="text-center text-gray-700 mb-12 text-lg">A través de reflexiones profundas, te guiamos para identificar patrones limitantes y explorar nuevas formas de pensar, creer y comportarte. Si un enfoque no es constructivo, te lo señalamos con alternativas para tu mejor evolución.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="process-step text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Identificación</h3>
+                        <p class="text-gray-600">Reconocemos juntos los patrones y creencias que te limitan.</p>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="process-step text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Comprensión</h3>
+                        <p class="text-gray-600">Entendemos el origen y propósito de estos patrones.</p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="process-step text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Transformación</h3>
+                        <p class="text-gray-600">Implementamos nuevas formas de pensar y actuar.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-16 text-center">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1392&q=80" alt="Proceso de transformación" class="rounded-lg shadow-xl mx-auto w-full max-w-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-center text-primary mb-16">Servicios Exclusivos para tu Evolución</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541185934-01b600ea069c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80')"></div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-4 text-secondary">Consultorías Personalizadas</h3>
+                        <p class="text-gray-600 mb-6">Sesiones individuales para abordar tus desafíos específicos y crear un plan de acción personalizado para tu crecimiento.</p>
+                        <a href="#contacto" class="inline-block px-6 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">Agenda tu Consulta</a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-4 text-secondary">Programas de Acompañamiento</h3>
+                        <p class="text-gray-600 mb-6">Cursos y talleres intensivos para una transformación profunda en áreas específicas de tu vida.</p>
+                        <a href="#contacto" class="inline-block px-6 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">Explora Programas</a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1392&q=80')"></div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-4 text-secondary">Recursos Premium</h3>
+                        <p class="text-gray-600 mb-6">Acceso a meditaciones guiadas, guías descargables y contenido exclusivo para tu desarrollo continuo.</p>
+                        <a href="#contacto" class="inline-block px-6 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">Descubre Recursos</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pricing Table -->
+            <div class="mt-20 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-serif font-bold text-center text-primary mb-8">Planes de Membresía</h3>
+                
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x">
+                        <!-- Basic Plan -->
+                        <div class="p-8 text-center">
+                            <h4 class="text-xl font-bold mb-4 text-secondary">Básico</h4>
+                            <p class="text-3xl font-bold mb-4 text-primary">$29<span class="text-lg text-gray-500">/mes</span></p>
+                            <ul class="mb-6 space-y-3 text-gray-600">
+                                <li>Acceso a contenido básico</li>
+                                <li>1 meditación guiada semanal</li>
+                                <li>Boletín mensual</li>
+                                <li>Soporte por email</li>
+                            </ul>
+                            <a href="#contacto" class="inline-block px-6 py-2 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition">Elegir Plan</a>
+                        </div>
+                        
+                        <!-- Premium Plan (Featured) -->
+                        <div class="p-8 text-center bg-accent relative">
+                            <div class="absolute top-0 right-0 bg-secondary text-white px-3 py-1 text-xs font-bold">POPULAR</div>
+                            <h4 class="text-xl font-bold mb-4 text-secondary">Premium</h4>
+                            <p class="text-3xl font-bold mb-4 text-primary">$79<span class="text-lg text-gray-500">/mes</span></p>
+                            <ul class="mb-6 space-y-3 text-gray-600">
+                                <li>Todo en Básico</li>
+                                <li>3 meditaciones guiadas semanales</li>
+                                <li>Guías descargables</li>
+                                <li>Soporte prioritario</li>
+                                <li>1 consulta mensual</li>
+                            </ul>
+                            <a href="#contacto" class="inline-block px-6 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">Elegir Plan</a>
+                        </div>
+                        
+                        <!-- VIP Plan -->
+                        <div class="p-8 text-center">
+                            <h4 class="text-xl font-bold mb-4 text-secondary">VIP</h4>
+                            <p class="text-3xl font-bold mb-4 text-primary">$149<span class="text-lg text-gray-500">/mes</span></p>
+                            <ul class="mb-6 space-y-3 text-gray-600">
+                                <li>Todo en Premium</li>
+                                <li>Acceso ilimitado</li>
+                                <li>2 consultas mensuales</li>
+                                <li>Plan personalizado</li>
+                                <li>Soporte 24/7</li>
+                            </ul>
+                            <a href="#contacto" class="inline-block px-6 py-2 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition">Elegir Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-20 bg-accent">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-center text-primary mb-16">Historias Reales de Transformación</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="María G." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-secondary">María G.</h4>
+                            <p class="text-sm text-gray-500">Estudiante desde 2021</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Gracias a las enseñanzas de este canal, he logrado sanar relaciones que creía perdidas y encontrar paz interior. Mi vida ha cambiado completamente."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Carlos R." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-secondary">Carlos R.</h4>
+                            <p class="text-sm text-gray-500">Participante VIP</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"El programa de finanzas espirituales me ayudó a cambiar mi mentalidad sobre el dinero. En 6 meses dupliqué mis ingresos y encontré equilibrio."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana L." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-secondary">Ana L.</h4>
+                            <p class="text-sm text-gray-500">Consultora personal</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Las consultas personalizadas fueron el punto de inflexión en mi vida. Identificamos patrones que ni siquiera sabía que tenía y ahora vivo con propósito."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-serif font-bold text-center mb-2">¿Listo para tu Siguiente Nivel?</h2>
+                <p class="text-center mb-12 text-light">Contáctanos para comenzar tu viaje de transformación personal</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-lg shadow-xl p-8 text-gray-800">
+                        <h3 class="text-xl font-bold mb-6 text-secondary">Envíanos un Mensaje</h3>
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Nombre</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 mb-2">Mensaje</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 bg-primary text-white rounded-md hover:bg-secondary transition">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">Otras Formas de Contacto</h3>
+                        
+                        <div class="mb-8">
+                            <h4 class="font-bold mb-4">Chat en Vivo</h4>
+                            <p class="mb-4">Nuestro chatbot está disponible 24/7 para responder tus preguntas frecuentes.</p>
+                            <button id="chatbot-toggle" class="px-4 py-2 bg-white text-primary rounded-md hover:bg-light transition">Abrir Chatbot</button>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h4 class="font-bold mb-4">Redes Sociales</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center hover:bg-light transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center hover:bg-light transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center hover:bg-light transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center hover:bg-light transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold mb-4">Horario de Atención</h4>
+                            <p class="mb-2">Lunes a Viernes: 9am - 6pm</p>
+                            <p>Sábados: 10am - 2pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo and Description -->
+                <div>
+                    <a href="#" class="text-2xl font-serif font-bold text-light mb-4 inline-block">Espiritualidad<span class="text-accent">Transforma</span></a>
+                    <p class="text-gray-300">Tu guía para el desarrollo personal y espiritual. Transformando vidas desde 2018.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-light">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-300 hover:text-accent transition">Inicio</a></li>
+                        <li><a href="#sobre-nosotros" class="text-gray-300 hover:text-accent transition">Sobre Nosotros</a></li>
+                        <li><a href="#servicios" class="text-gray-300 hover:text-accent transition">Servicios</a></li>
+                        <li><a href="#testimonios" class="text-gray-300 hover:text-accent transition">Testimonios</a></li>
+                        <li><a href="#contacto" class="text-gray-300 hover:text-accent transition">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-light">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Consultorías</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Programas</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Recursos</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Talleres</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Retiros</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-light">Suscríbete</h4>
+                    <p class="text-gray-300 mb-4">Recibe contenido exclusivo y ofertas especiales.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Tu email" class="px-4 py-2 rounded-l-md text-gray-800 w-full focus:outline-none">
+                        <button type="submit" class="px-4 py-2 bg-accent text-dark rounded-r-md hover:bg-light transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 EspiritualidadTransforma. Todos los derechos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-accent transition">Términos</a>
+                    <a href="#" class="text-gray-400 hover:text-accent transition">Privacidad</a>
+                    <a href="#" class="text-gray-400 hover:text-accent transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Modal (hidden by default) -->
+    <div id="chatbot-modal" class="fixed bottom-0 right-0 mb-20 mr-6 w-80 bg-white rounded-t-lg shadow-xl hidden z-50">
+        <div class="bg-primary text-white px-4 py-3 rounded-t-lg flex justify-between items-center">
+            <h3 class="font-bold">Asistente Virtual</h3>
+            <button id="chatbot-close" class="text-white hover:text-accent">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="p-4 h-64 overflow-y-auto">
+            <div class="mb-4">
+                <div class="bg-gray-100 rounded-lg p-3 inline-block max-w-xs">
+                    <p>¡Hola! Soy tu asistente espiritual. ¿En qué puedo ayudarte hoy?</p>
+                </div>
+            </div>
+        </div>
+        <div class="p-4 border-t">
+            <div class="flex">
+                <input type="text" placeholder="Escribe tu mensaje..." class="px-4 py-2 border rounded-l-md w-full focus:outline-none">
+                <button class="px-4 py-2 bg-primary text-white rounded-r-md hover:bg-secondary transition">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Chatbot toggle
+        document.getElementById('chatbot-toggle').addEventListener('click', function() {
+            document.getElementById('chatbot-modal').classList.toggle('hidden');
+        });
+
+        document.getElementById('chatbot-close').addEventListener('click', function() {
+            document.getElementById('chatbot-modal').classList.add('hidden');
+        });
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+                        document.getElementById('mobile-menu').classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
